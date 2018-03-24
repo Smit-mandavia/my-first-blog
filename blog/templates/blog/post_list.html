@@ -7,11 +7,13 @@
             <h1><a href="/">Smit Mandavia Blog</a></h1>
         </div>
 
-        <div>
-            <p>published: 23.03.2018, 20:58</p>
-            <h2><a href="">My first post</a></h2>
-            <p>I am really lucky to have such nice besties :)</p>
-        </div>
+{% for post in posts %}
+  <div>
+    <p>published: {{ post.published_date }}</p>
+    <h1><a href="">{{ post.title }}</a></h1>
+    <p>{{ post.text|linebreaksbr }}</p>
+  </div>
+{% endfor %}
 
         <div>
             <p>published: 23.03.2018, 21:14</p>
