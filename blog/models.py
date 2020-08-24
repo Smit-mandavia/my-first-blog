@@ -3,7 +3,6 @@ from django.utils import timezone
 # Create your models here.
 
 class Post(models.Model):
-    """docstring for [object Object]."""
     author = models.ForeignKey('auth.User',on_delete=models.CASCADE)
     publisher = models.CharField(max_length=50)
     title = models.CharField(max_length=200)
